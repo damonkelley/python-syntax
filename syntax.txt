@@ -1,0 +1,20 @@
+PYTHON						*python.vim* *ft-python-syntax*
+
+Option and commands to select Python version: >
+
+  :let python_version_2 = 1
+<
+  Enable highlighting for Python 2 (Python 3 highlighting is enabled by
+  default). Also can be set as a local to buffer `b:python_version_2`
+  variable.
+
+The following local to buffer commands can be used to switch between two
+highlighting modes:
+
+  Switch to Python 2 highlighting mode >
+    :Python2Syntax
+<
+  Switch to Python 3 highlighting mode >
+    :Python3Syntax
+<
+ vim:tw=78:sw=4:ts=8:ft=help:norl:
