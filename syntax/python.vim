@@ -380,6 +380,13 @@ syn keyword pythonExClass	RuntimeWarning FutureWarning
 syn keyword pythonExClass	ImportWarning UnicodeWarning
 
 
+" This is fast but code inside triple quoted strings screws it up. It
+" is impossible to fix because the only way to know if you are inside a
+" triple quoted string is to start from the beginning of the file.
+syn sync match pythonSync grouphere NONE "):$"
+syn sync maxlines=200
+
+
 hi def link pythonStatement        Statement
 hi def link pythonImport           Include
 hi def link pythonFunction         Function
